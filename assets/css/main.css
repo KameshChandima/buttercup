@@ -1723,6 +1723,11 @@ textarea.form-control:focus {
   visibility: visible;
   transform: translate(0);
 }
+@media (max-width: 767px) {
+  .back-to-top {
+    display: none;
+  }
+}
 
 /* 11.Title */
 .section-title .sub-title {
@@ -5126,6 +5131,44 @@ input.main-search-input::placeholder {
   .contact-form.style2 {
     padding: 30px;
   }
+  .contact-form.style2 h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .contact-form.style2 input,
+  .contact-form.style2 .single-select {
+    height: 58px;
+    margin-bottom: 20px;
+  }
+  .contact-form.style2 .nice-select.single-select {
+    display: block;
+    float: none;
+    width: 100%;
+    min-height: 58px;
+    height: 58px;
+    line-height: 26px;
+    white-space: normal;
+    z-index: 2;
+  }
+  .contact-form.style2 .nice-select.single-select.open {
+    height: auto;
+    z-index: 20;
+  }
+  .contact-form.style2 .nice-select.single-select .list {
+    position: static;
+    width: 100%;
+    max-height: 220px;
+    margin-top: 12px;
+    overflow-y: auto;
+    transform-origin: 50% 0;
+  }
+  .contact-form.style2 textarea.form-control {
+    min-height: 170px;
+  }
+  .contact-form.style2 .form-group {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .contact-section {
@@ -6374,6 +6417,30 @@ input.main-search-input::placeholder {
 @media (max-width: 1199px) {
   .testimonial-wrapper.style3 .btn-wrap .arrow-next {
     right: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-wrapper.style3 .btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 22px;
+  }
+  .testimonial-wrapper.style3 .btn-wrap .arrow-prev,
+  .testimonial-wrapper.style3 .btn-wrap .arrow-next {
+    position: static;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  .testimonial-wrapper.style3 .btn-wrap .arrow-prev i,
+  .testimonial-wrapper.style3 .btn-wrap .arrow-next i {
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
   }
 }
 
@@ -8185,6 +8252,11 @@ input.main-search-input::placeholder {
 
 .cta-section {
   position: relative;
+}
+@media (max-width: 767px) {
+  .cta-section#app {
+    display: none;
+  }
 }
 .cta-section.style-white::before {
   position: absolute;
