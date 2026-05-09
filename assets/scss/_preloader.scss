@@ -36,11 +36,25 @@
 
             @media (max-width: 767px) {
                 font-size: 2.5em;
+                line-height: 1.05;
             }
 
             .letters-loading {
                 color: $theme-color;
                 position: relative;
+
+                @media (max-width: 767px) {
+                    &:nth-child(4) {
+                        display: block;
+                        height: 0;
+                        font-size: 0;
+                        line-height: 0;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
 
                 &:nth-child(2):before {
                     animation-delay: 0.2s;
