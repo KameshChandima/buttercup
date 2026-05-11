@@ -1378,8 +1378,21 @@
 
 .offcanvas__logo {
 	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+
 		img {
-			width: 150px;
+			width: 58px;
+		}
+
+		span {
+			color: $title-color;
+			font-family: $title-font;
+			font-size: 18px;
+			font-weight: 900;
+			line-height: 1;
+			letter-spacing: 1px;
 		}
 	}
 }

@@ -581,30 +581,40 @@
         }
 
         .dishes-thumb {
-            position: relative; 
+            position: relative;
+            flex: 0 0 150px;
+            width: 150px;
+            height: 245px;
             margin-bottom: -200px;
             margin-top: -165px;
             margin-left: -2px;
-            border-radius: 20px 0px 20px 20px; 
+            border-radius: 20px 0px 20px 20px;
+            overflow: hidden;
 
-            @include breakpoint (max-xl) { 
+            @include breakpoint (max-xl) {
+                flex-basis: 170px;
+                width: 170px;
+                height: 170px;
                 margin-bottom: 0px;
-                margin-top: 0px; 
-                height: 100%;
+                margin-top: 0px;
             }
 
             img {
                 position: relative;
                 z-index: 2;
+                width: 100%;
                 height: 100%;
-                border-radius: 20px 0px 20px 20px; 
-            } 
+                object-fit: cover;
+                border-radius: 20px 0px 20px 20px;
+            }
         }
 
-        .dishes-content { 
+        .dishes-content {
             padding: 25px 15px;
+            flex: 1;
+            text-align: center;
 
-            @include breakpoint (max-xl4) {  
+            @include breakpoint (max-xl4) {
               padding: 25px 8px;
             }
 
@@ -709,8 +719,10 @@
         @include breakpoint (max-md) {
             flex-direction: column;
             padding: 25px;
-            .dishes-thumb { 
-                width: 100%; 
+            .dishes-thumb {
+                width: 100%;
+                height: 220px;
+                flex-basis: auto;
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
@@ -718,8 +730,9 @@
                 -o-border-radius: 10px;
 
                 img {
-                    height: 300px;
+                    height: 100%;
                     width: 100%;
+                    object-fit: cover;
                     border-radius: 10px;
                     -webkit-border-radius: 10px;
                     -moz-border-radius: 10px;
