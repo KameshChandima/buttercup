@@ -40,6 +40,11 @@
        
 
         .opening-details {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
             .schedule-wrapper {
                 display: flex;
                 align-items: center;
@@ -204,7 +209,7 @@
     &.style1 {
         padding: 41px 35px 35px 30px;
         background-color: $white;  
-        border: 1px solid rgba(235, 0, 41, 0.25); 
+        border: 1px solid rgba(252, 121, 26, 0.25);
         border-radius: 8px;
         .contact-icon { 
             margin-bottom: 25px;
@@ -214,7 +219,7 @@
                 justify-content: center;
                 padding: 20px 15px 10px;
                 border-radius: 8px;
-                border: 1px solid rgba(235, 0, 41, 0.25);
+                border: 1px solid rgba(252, 121, 26, 0.25);
                 background: $bg-color-2;
             }
         }

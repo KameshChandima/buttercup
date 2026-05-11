@@ -566,6 +566,9 @@ JS TABLE OF CONTENTS
             20. Mouse Cursor    
         -----------------------------------*/
         function mousecursor() {
+            if (window.matchMedia("(max-width: 767px)").matches) {
+                return;
+            }
             if ($("body")) {
                 const e = document.querySelector(".cursor-inner"),
                     t = document.querySelector(".cursor-outer");

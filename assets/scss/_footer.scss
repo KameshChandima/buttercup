@@ -345,10 +345,11 @@
 .footer-bottom {
     position: relative;
     z-index: 9;
-    background: $theme-color;
+    background: $black;
 
-    .footer-wrapper {  
-      padding: 18px 0; 
+    .footer-wrapper {
+      padding: 18px 0;
+      justify-content: center !important;
         @include breakpoint (max-md){
             flex-wrap: wrap;
             gap: 20px;
@@ -357,6 +358,8 @@
 
         p {
             color: $white;
+            text-align: center;
+            width: 100%;
  
                 a {
                     color: $white!important;
@@ -367,7 +370,7 @@
         }
         
         .brand-logo {
-            @include flex;
+            display: none;
             gap: 20px;
 
             li {

@@ -59,7 +59,7 @@ Description: Fresheat food & Restaurant Html Template  <
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #EB0029;
+  --theme: #FC791A;
   --theme2:#FC791A;
   --title:#010F1C;
   --dark: #222222;
@@ -420,7 +420,7 @@ textarea.form-control:focus {
 .theme-btn.style6 {
   padding: 13px 40px;
   border-radius: 100px;
-  background-color: rgba(235, 0, 41, 0.1);
+  background-color: rgba(252, 121, 26, 0.12);
   color: var(--theme) !important;
   font-family: var(--title-font);
   font-size: 14px;
@@ -451,6 +451,32 @@ textarea.form-control:focus {
 }
 .theme-btn.style6:hover i {
   color: var(--white);
+}
+.theme-btn,
+.theme-btn.style3,
+.theme-btn.style4,
+.theme-btn.style5,
+.theme-btn.style6 {
+  background-color: var(--theme) !important;
+  border-color: var(--theme) !important;
+  color: var(--white) !important;
+}
+.theme-btn::before,
+.theme-btn::after,
+.theme-btn.style3::before,
+.theme-btn.style3::after,
+.theme-btn.style4::before,
+.theme-btn.style4::after,
+.theme-btn.style5::before,
+.theme-btn.style5::after,
+.theme-btn.style6::before,
+.theme-btn.style6::after {
+  background-color: var(--theme2);
+}
+.theme-btn i,
+.theme-btn.style6 i {
+  background-color: transparent !important;
+  color: var(--white) !important;
 }
 @media (max-width: 767px) {
   .theme-btn {
@@ -2329,6 +2355,11 @@ textarea.form-control:focus {
 }
 .cursor-outer.cursor-hover {
   opacity: 0;
+}
+@media (max-width: 767px) {
+  .mouse-cursor {
+    display: none !important;
+  }
 }
 
 .comment-list .comment-item {
@@ -4880,10 +4911,11 @@ input.main-search-input::placeholder {
 .footer-bottom {
   position: relative;
   z-index: 9;
-  background: var(--theme);
+  background: var(--black);
 }
 .footer-bottom .footer-wrapper {
   padding: 18px 0;
+  justify-content: center !important;
 }
 @media (max-width: 767px) {
   .footer-bottom .footer-wrapper {
@@ -4894,6 +4926,8 @@ input.main-search-input::placeholder {
 }
 .footer-bottom .footer-wrapper p {
   color: var(--white);
+  text-align: center;
+  width: 100%;
 }
 .footer-bottom .footer-wrapper p a {
   color: var(--white) !important;
@@ -4902,7 +4936,7 @@ input.main-search-input::placeholder {
   color: var(--white) !important;
 }
 .footer-bottom .footer-wrapper .brand-logo {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
 }
@@ -5009,6 +5043,12 @@ input.main-search-input::placeholder {
   position: relative;
   background-image: url(../img/contact/contactThumb3_1.jpg);
 }
+.contact-wrapper.style2 .opening-details {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .contact-wrapper.style2 .opening-details .schedule-wrapper {
   display: flex;
   align-items: center;
@@ -5042,6 +5082,40 @@ input.main-search-input::placeholder {
   line-height: 50px;
   text-transform: capitalize;
   margin-top: 40px;
+}
+.contact-wrapper.style2 .opening-details .opening-time-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 70px;
+  color: var(--white);
+  text-align: center;
+}
+.contact-wrapper.style2 .opening-details .opening-time-simple span {
+  color: var(--theme2);
+  font-family: var(--title-font);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.contact-wrapper.style2 .opening-details .opening-time-simple strong {
+  color: var(--white);
+  font-family: var(--title-font);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 42px;
+}
+@media (max-width: 767px) {
+  .contact-wrapper.style2 .opening-details .opening-time-simple {
+    margin-top: 34px;
+  }
+  .contact-wrapper.style2 .opening-details .opening-time-simple strong {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 .contact-form-section.style2 {
@@ -5190,7 +5264,7 @@ input.main-search-input::placeholder {
 .contact-box.style1 {
   padding: 41px 35px 35px 30px;
   background-color: var(--white);
-  border: 1px solid rgba(235, 0, 41, 0.25);
+  border: 1px solid rgba(252, 121, 26, 0.25);
   border-radius: 8px;
 }
 .contact-box.style1 .contact-icon {
@@ -5202,7 +5276,7 @@ input.main-search-input::placeholder {
   justify-content: center;
   padding: 20px 15px 10px;
   border-radius: 8px;
-  border: 1px solid rgba(235, 0, 41, 0.25);
+  border: 1px solid rgba(252, 121, 26, 0.25);
   background: var(--bg2);
 }
 .contact-box.style1 .title {
@@ -6353,8 +6427,8 @@ input.main-search-input::placeholder {
   height: 56px;
   line-height: 56px;
   text-align: center;
-  background: transparent;
-  color: var(--theme);
+  background: var(--theme);
+  color: var(--white);
   border: 1px solid var(--theme);
   border-radius: 50%;
   transition: all 0.4s;
@@ -6761,7 +6835,7 @@ input.main-search-input::placeholder {
   margin-bottom: 20px;
 }
 .review-more:hover {
-  color: var(--title);
+  color: var(--theme2);
 }
 .testimonial-card.style3.review-card .fancy-box {
   margin-top: auto;
