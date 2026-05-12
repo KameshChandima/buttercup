@@ -1650,9 +1650,9 @@ textarea.form-control:focus {
 }
 .preloader .animation-preloader .brand .brand-icon {
   display: block;
-  height: 42px;
+  height: 126px;
   object-fit: contain;
-  width: 42px;
+  width: 126px;
 }
 .preloader .animation-preloader .brand .brand-name {
   color: var(--white);
