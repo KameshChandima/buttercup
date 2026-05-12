@@ -71,31 +71,29 @@
 	}
 }
 
-@-webkit-keyframes letters-loading {
-	0%,
-	75%,
-	100% {
+@keyframes brandLetterIn {
+	0% {
 		opacity: 0;
-		transform: rotateY(-90deg);
+		transform: translateY(12px);
 	}
-	25%,
-	50% {
+	100% {
 		opacity: 1;
-		transform: rotateY(0deg);
+		transform: translateY(0);
 	}
 }
 
-@keyframes letters-loading {
-	0%,
-	75%,
-	100% {
-		opacity: 0;
-		transform: rotateY(-90deg);
+@keyframes progressAnim {
+	0% {
+		width: 0%;
 	}
-	25%,
-	50% {
-		opacity: 1;
-		transform: rotateY(0deg);
+	58% {
+		width: 70%;
+	}
+	76% {
+		width: 72%;
+	}
+	100% {
+		width: 100%;
 	}
 }
 

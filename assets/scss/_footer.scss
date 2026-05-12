@@ -1,9 +1,9 @@
 
 
 .footer-top {
-    padding: 50px 50px;
+    padding: 28px 32px;
     background: $theme-color-2;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -55,7 +55,7 @@
 
 
 .footer-widgets-wrapper {
-    padding: 90px 0 120px;
+    padding: 48px 0;
     position: relative;
     z-index: 9;
 
@@ -94,11 +94,11 @@
 
 
     @include breakpoint(max-xl){
-        padding: 70px 0 100px;
+        padding: 40px 0;
     }
 
     @include breakpoint(max-lg){
-        padding: 50px 0 70px;
+        padding: 32px 0;
     }
 
     .single-footer-widget {

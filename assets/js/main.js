@@ -846,11 +846,76 @@ JS TABLE OF CONTENTS
     -----------------------------------*/
 
     function loader() {
-        $(window).on('load', function () {
-            // Animate loader off screen
-            $(".preloader").addClass('loaded');
-            $(".preloader").delay(600).fadeOut();
+        var preloader = document.getElementById("preloader");
+
+        if (!preloader) {
+            return;
+        }
+
+        var brandName = preloader.querySelector(".brand-name");
+        var pctLabel = preloader.querySelector(".pct-label");
+        var overlay = preloader.querySelector(".loader-overlay");
+        var duration = 2400;
+
+        if (brandName) {
+            var brandText = brandName.textContent;
+            brandName.setAttribute("aria-label", brandText.trim());
+            brandName.innerHTML = "";
+
+            brandText.split("").forEach(function (letter) {
+                var span = document.createElement("span");
+                span.className = "brand-letter";
+                span.setAttribute("aria-hidden", "true");
+                span.innerHTML = letter === " " ? "&nbsp;" : letter;
+                brandName.appendChild(span);
+            });
+        }
+
+        function progressValue(elapsed) {
+            var t = Math.min(elapsed / duration, 1);
+
+            if (t < 0.58) {
+                return (t / 0.58) * 70;
+            }
+
+            if (t < 0.76) {
+                return 70 + ((t - 0.58) / 0.18) * 2;
+            }
+
+            return 72 + ((t - 0.76) / 0.24) * 28;
+        }
+
+        function animateCounter(startTime) {
+            requestAnimationFrame(function (timestamp) {
+                if (!startTime) {
+                    startTime = timestamp;
+                }
+
+                var value = Math.round(progressValue(timestamp - startTime));
+
+                if (pctLabel) {
+                    pctLabel.textContent = value + "%";
+                }
+
+                if (value < 100) {
+                    animateCounter(startTime);
+                }
+            });
+        }
+
+        animateCounter();
+
+        $(window).on("load", function () {
+            preloader.classList.add("loaded");
         });
+
+        if (overlay) {
+            overlay.addEventListener("transitionend", function (event) {
+                if (event.propertyName === "opacity" && preloader.classList.contains("loaded")) {
+                    preloader.remove();
+                }
+            });
+        }
     }
 
     loader();
