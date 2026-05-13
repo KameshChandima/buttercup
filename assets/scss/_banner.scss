@@ -603,3 +603,25 @@
         text-align: center;
     }
 }
+
+.buttercup-hero {
+    align-items: center;
+}
+
+.seafood-art-panel {
+    align-self: center;
+    justify-self: end;
+    width: min(100%, 420px);
+    height: clamp(300px, 27vw, 420px);
+    min-height: 0;
+    aspect-ratio: 1;
+}
+
+@media (max-width: 1199px) {
+    .seafood-art-panel {
+        justify-self: center;
+        width: min(100%, 520px);
+        height: clamp(210px, 34vw, 300px);
+        min-height: 0;
+    }
+}

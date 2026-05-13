@@ -6471,6 +6471,7 @@ input.main-search-input::placeholder {
 .buttercup-hero {
   grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.62fr);
   gap: 44px;
+  align-items: center;
 }
 .hero-script {
   font-size: clamp(54px, 6vw, 88px);
@@ -6483,7 +6484,12 @@ input.main-search-input::placeholder {
   line-height: 29px;
 }
 .seafood-art-panel {
-  min-height: 300px;
+  align-self: center;
+  justify-self: end;
+  width: min(100%, 420px);
+  height: clamp(300px, 27vw, 420px);
+  min-height: 0;
+  aspect-ratio: 1;
 }
 .buffet-panel {
   grid-template-columns: minmax(0, 1fr) minmax(190px, auto) auto;
@@ -6539,7 +6545,10 @@ input.main-search-input::placeholder {
     grid-template-columns: 1fr;
   }
   .seafood-art-panel {
-    min-height: 190px;
+    justify-self: center;
+    width: min(100%, 520px);
+    height: clamp(210px, 34vw, 300px);
+    min-height: 0;
   }
 }
 @media (max-width: 767px) {
@@ -8664,8 +8673,8 @@ input.main-search-input::placeholder {
   margin-top: 0px;
 }
 .food-menu-tab.style2 .single-menu-items .details .menu-content {
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-2);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 .food-menu-tab.style2 .single-menu-items .details .menu-content h3 {
   color: var(--title);
