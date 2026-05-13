@@ -595,3 +595,10 @@
 .swiper-pagination-fraction {
     width: 3%;
 }
+
+@media (max-width: 767px) {
+    .buttercup-hero h1,
+    .hero-kicker {
+        text-align: center;
+    }
+}

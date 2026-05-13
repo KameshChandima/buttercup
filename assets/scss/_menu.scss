@@ -42,6 +42,28 @@
             padding: 60px 30px;
         }
     }
+
+    &.style3 {
+        &.section-padding {
+            padding-top: 72px;
+            padding-bottom: 72px;
+
+            @include breakpoint (max-xxl) {
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+
+            @include breakpoint (max-xl) {
+                padding-top: 56px;
+                padding-bottom: 56px;
+            }
+
+            @include breakpoint (max-lg) {
+                padding-top: 44px;
+                padding-bottom: 44px;
+            }
+        }
+    }
 }
 
 .food-menu-tab {

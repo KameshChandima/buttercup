@@ -1623,6 +1623,8 @@ textarea.form-control:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 92vw;
+  padding: 0 16px;
   z-index: 1000;
 }
 .preloader .animation-preloader .spinner {
@@ -1716,6 +1718,42 @@ textarea.form-control:focus {
     max-width: 300px;
   }
 }
+@media (max-width: 991px) {
+  .preloader .animation-preloader .brand {
+    gap: 12px;
+  }
+  .preloader .animation-preloader .brand .brand-icon {
+    height: 110px;
+    width: 110px;
+  }
+  .preloader .animation-preloader .brand .brand-name {
+    font-size: 3.2em;
+  }
+}
+@media (max-width: 767px) {
+  .preloader .animation-preloader .brand {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .preloader .animation-preloader .brand .brand-icon {
+    height: 92px;
+    width: 92px;
+  }
+  .preloader .animation-preloader .brand .brand-name {
+    font-size: 2.4em;
+  }
+}
+@media (max-width: 575px) {
+  .preloader .animation-preloader .brand .brand-icon {
+    height: 76px;
+    width: 76px;
+  }
+  .preloader .animation-preloader .brand .brand-name {
+    font-size: 1.75em;
+    max-width: 260px;
+  }
+}
 .preloader .animation-preloader .progress-track {
   background-color: rgba(255, 255, 255, 0.16);
   border-radius: 999px;
@@ -1723,6 +1761,11 @@ textarea.form-control:focus {
   margin-bottom: 14px;
   overflow: hidden;
   width: min(320px, 70vw);
+}
+@media (max-width: 575px) {
+  .preloader .animation-preloader .progress-track {
+    width: min(280px, 78vw);
+  }
 }
 .preloader .animation-preloader .progress-fill {
   animation: progressAnim 2.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -6521,12 +6564,14 @@ input.main-search-input::placeholder {
   .buttercup-hero h1 {
     font-size: clamp(39px, 12vw, 54px);
     line-height: 0.95;
+    text-align: center;
     overflow-wrap: anywhere;
   }
   .hero-kicker {
     font-size: 11px;
     letter-spacing: 1.6px;
     line-height: 18px;
+    text-align: center;
   }
   .gold-divider {
     width: 100%;
@@ -7513,6 +7558,28 @@ input.main-search-input::placeholder {
 .testimonial-section {
   position: relative;
 }
+.testimonial-section.section-padding {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1399px) {
+  .testimonial-section.section-padding {
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+}
+@media (max-width: 1199px) {
+  .testimonial-section.section-padding {
+    padding-top: 56px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 991px) {
+  .testimonial-section.section-padding {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+}
 .testimonial-section .vagetable-shape {
   position: absolute;
   bottom: 0;
@@ -8251,23 +8318,29 @@ input.main-search-input::placeholder {
 .history-wrapper.style1 .history-thumb {
   position: relative;
   margin-left: -320px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 28px;
+  margin-bottom: 28px;
   height: 560px;
   overflow: hidden;
+}
+@media (max-width: 1399px) {
+  .history-wrapper.style1 .history-thumb {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 @media (max-width: 991px) {
   .history-wrapper.style1 .history-thumb {
     margin-left: 0;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 22px;
+    margin-bottom: 22px;
     height: 430px;
   }
 }
 @media (max-width: 575px) {
   .history-wrapper.style1 .history-thumb {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 340px;
   }
 }
@@ -8293,16 +8366,22 @@ input.main-search-input::placeholder {
   animation: 6s rippleOne linear infinite;
 }
 .history-wrapper.style1 .history-content .theme-btn {
-  margin-top: 50px;
+  margin-top: 32px;
 }
 .history-wrapper.style1 .history-content.section-padding {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media (max-width: 1399px) {
+  .history-wrapper.style1 .history-content.section-padding {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
 }
 @media (max-width: 991px) {
   .history-wrapper.style1 .history-content.section-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .history-wrapper.style1 .history-content .fancy-box.style6 .icon {
@@ -8722,6 +8801,28 @@ input.main-search-input::placeholder {
 .food-menu-tab-wrapper.style3 {
   position: relative;
   z-index: 1;
+}
+.food-menu-tab-wrapper.style3.section-padding {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+@media (max-width: 1399px) {
+  .food-menu-tab-wrapper.style3.section-padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+@media (max-width: 1199px) {
+  .food-menu-tab-wrapper.style3.section-padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+@media (max-width: 991px) {
+  .food-menu-tab-wrapper.style3.section-padding {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
 }
 .food-menu-tab-wrapper.style3 .shape1 {
   position: absolute;

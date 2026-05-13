@@ -484,6 +484,26 @@
 .testimonial-section {
     position: relative;
 
+    &.section-padding {
+        padding-top: 70px;
+        padding-bottom: 60px;
+
+        @include breakpoint (max-xxl) {
+            padding-top: 64px;
+            padding-bottom: 56px;
+        }
+
+        @include breakpoint (max-xl) {
+            padding-top: 56px;
+            padding-bottom: 48px;
+        }
+
+        @include breakpoint (max-lg) {
+            padding-top: 48px;
+            padding-bottom: 40px;
+        }
+    }
+
     .vagetable-shape {
         position: absolute;
         bottom: 0;
