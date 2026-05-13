@@ -486,21 +486,38 @@
 
     &.section-padding {
         padding-top: 70px;
-        padding-bottom: 60px;
+        padding-bottom: 70px;
 
         @include breakpoint (max-xxl) {
             padding-top: 64px;
-            padding-bottom: 56px;
+            padding-bottom: 64px;
         }
 
         @include breakpoint (max-xl) {
             padding-top: 56px;
-            padding-bottom: 48px;
+            padding-bottom: 56px;
         }
 
         @include breakpoint (max-lg) {
             padding-top: 48px;
-            padding-bottom: 40px;
+            padding-bottom: 48px;
+        }
+    }
+
+    .slider-area {
+        margin-bottom: 0;
+    }
+
+    .testmonialSliderThree {
+        padding-bottom: 0;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
+        .swiper-slide {
+            display: flex;
+            height: auto;
         }
     }
 

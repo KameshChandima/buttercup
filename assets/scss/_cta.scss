@@ -387,6 +387,10 @@
 .cta-section {
     position: relative;
 
+    &#app {
+        display: none;
+    }
+
     &.style-white {
         &::before {
             @include before;
