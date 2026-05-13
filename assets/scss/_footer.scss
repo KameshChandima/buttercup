@@ -59,6 +59,24 @@
     position: relative;
     z-index: 9;
 
+    .footer-bottom-line {
+        gap: 20px;
+        padding-top: 6px;
+
+        p {
+            color: $white;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint (max-md) {
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+        }
+    }
+
     .shape1{
         position: absolute;
         bottom: 56px;
